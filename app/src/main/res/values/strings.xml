@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Pakistan Vaccine Schedule</string>
+    <string name="vaccine_name">Vaccine Name</string>
+    <string name="due_date">Due Date: xx:xx:xxxx</string>
+    <string name="date_given">Due Given: xx:xx:xxxx</string>
+    <string name="vaccine_status">Status: Not Specified</string>
+    <string name="vaccine_reminder_status">Reminder: Yes</string>
 </resources>
