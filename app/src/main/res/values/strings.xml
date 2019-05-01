@@ -2,7 +2,30 @@
     <string name="app_name">Pakistan Vaccine Schedule</string>
     <string name="vaccine_name">Vaccine Name</string>
     <string name="due_date">Due Date: xx:xx:xxxx</string>
-    <string name="date_given">Due Given: xx:xx:xxxx</string>
+    <string name="date_given">Given Date: xx:xx:xxxx</string>
     <string name="vaccine_status">Status: Not Specified</string>
     <string name="vaccine_reminder_status">Reminder: Yes</string>
+
+
+    <string-array name="vaccine_names">
+        <item>BCG(Dose-1)</item>
+        <item>OPV(Dose-1)</item>
+        <item>IPV(Dose-1)</item>
+        <item>HEP B(Dose-1)</item>
+        <item>DTP(Dose-1)</item>
+        <item>HIB(Dose-1)</item>
+        <item>PCV(Dose-1)</item>
+        <item>IPV(Dose-2)</item>
+        <item>Hep B(Dose-2)</item>
+        <item>DTP(Dose-2)</item>
+        <item>Hib(Dose-2)</item>
+        <item>Rota Virus(Dose-1)</item>
+        <item>IPV(Dose-3)</item>
+        <item>Hep B(Dose-3)</item>
+        <item>DTP(Dose-3)</item>
+        <item>Hib(Dose-3)</item>
+        <item>PCV(Dose-3)</item>
+        <item>Rota Virus(Dose-2)</item>
+    </string-array>
+
 </resources>

@@ -17,7 +17,7 @@ public class VaccineAdapter extends RecyclerView.Adapter<VaccineAdapter.ViewHold
     private ArrayList<Vaccine> mVaccineData;
     private Context mContext;
 
-    VaccineAdapter(Context context, ArrayList<Vaccine> vaccineData) {
+    public VaccineAdapter(Context context, ArrayList<Vaccine> vaccineData) {
         this.mVaccineData = vaccineData;
         this.mContext = context;
     }
