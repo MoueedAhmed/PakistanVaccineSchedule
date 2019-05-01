@@ -5,10 +5,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.amoueed.pakistanvaccineschedule.R;
 import com.amoueed.pakistanvaccineschedule.model.Vaccine;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -53,6 +55,7 @@ public class VaccineAdapter extends RecyclerView.Adapter<VaccineAdapter.ViewHold
         private TextView mGivenDateText;
         private TextView mVaccineStatusText;
         private TextView mReminderStatusText;
+        private ImageView mVaccineImage;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -63,6 +66,7 @@ public class VaccineAdapter extends RecyclerView.Adapter<VaccineAdapter.ViewHold
             mGivenDateText = itemView.findViewById(R.id.given_date);
             mVaccineStatusText = itemView.findViewById(R.id.vaccine_status);
             mReminderStatusText = itemView.findViewById(R.id.vaccine_reminder_status);
+            mVaccineImage = itemView.findViewById(R.id.vaccineImage);
         }
 
         void bindTo(Vaccine currentVaccine){
@@ -72,6 +76,7 @@ public class VaccineAdapter extends RecyclerView.Adapter<VaccineAdapter.ViewHold
             mGivenDateText.setText(currentVaccine.getGivenDate());
             mVaccineStatusText.setText(currentVaccine.getStatus());
             mReminderStatusText.setText(currentVaccine.getReminderStatus());
+            Glide.with(mContext).load(currentVaccine.getImageResource()).into(mVaccineImage);
 
         }
     }

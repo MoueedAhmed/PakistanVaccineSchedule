@@ -1,5 +1,6 @@
 package com.amoueed.pakistanvaccineschedule;
 
+import android.content.res.TypedArray;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private void initializeData() {
         // Get the resources from the XML file.
         String[] vaccineList = getResources().getStringArray(R.array.vaccine_names);
+        TypedArray vaccinesImageResources = getResources().obtainTypedArray(R.array.vaccine_images);
 
         // Clear the existing data (to avoid duplication).
         mVaccineData.clear();
@@ -44,8 +46,10 @@ public class MainActivity extends AppCompatActivity {
         // information about each sport.
         for(int i=0;i<vaccineList.length;i++){
             mVaccineData.add(new Vaccine(vaccineList[i], "Due Date: xx:xx:xxxx","Given Date: xx:xx:xxxx",
-                    "Status: Not Specified", "Reminder: Yes"));
+                    "Status: Not Specified", "Reminder: Yes", vaccinesImageResources.getResourceId(i,0)));
         }
+
+        vaccinesImageResources.recycle();
 
         // Notify the adapter of the change.
         mAdapter.notifyDataSetChanged();

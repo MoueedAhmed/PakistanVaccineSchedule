@@ -6,52 +6,38 @@ public class Vaccine {
     private String givenDate;
     private String status;
     private String reminderStatus;
+    private final int imageResource;
 
-    public Vaccine(String name, String dueDate, String givenDate, String status, String reminderStatus) {
+    public Vaccine(String name, String dueDate, String givenDate, String status, String reminderStatus, int imageResource) {
         this.name = name;
         this.dueDate = dueDate;
         this.givenDate = givenDate;
         this.status = status;
         this.reminderStatus = reminderStatus;
+        this.imageResource = imageResource;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getDueDate() {
         return dueDate;
-    }
-
-    public void setDueDate(String dueDate) {
-        this.dueDate = dueDate;
     }
 
     public String getGivenDate() {
         return givenDate;
     }
 
-    public void setGivenDate(String givenDate) {
-        this.givenDate = givenDate;
-    }
-
     public String getStatus() {
         return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 
     public String getReminderStatus() {
         return reminderStatus;
     }
 
-    public void setReminderStatus(String reminderStatus) {
-        this.reminderStatus = reminderStatus;
+    public int getImageResource() {
+        return imageResource;
     }
 }
